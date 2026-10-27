@@ -3,7 +3,9 @@
 /* Kratos-Rebirth: inherit light/dark colors; scroll wide equations locally. */
 .kratos-latex-display{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:.5em 0;margin:1em 0;-webkit-overflow-scrolling:touch}
 .kratos-latex-display>.katex-display{margin:.25em 0}
-.kratos-latex-inline{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;padding:.15em 0}
+/* Inline math follows the text baseline. A scroll container here produces
+   tiny scrollbars from KaTeX glyph overflow and can clip scripts/radicals. */
+.kratos-latex-inline{display:inline;overflow:visible;vertical-align:baseline}
 .katex-display{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:.25em 0}
 .katex-display>.katex{width:max-content;min-width:100%;box-sizing:border-box}
 .katex-display>.katex>.katex-html:has(>.katex-tag){padding-inline:3em}
