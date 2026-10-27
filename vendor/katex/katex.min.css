@@ -9,6 +9,9 @@
 .katex-display{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:.25em 0}
 .katex-display>.katex{width:max-content;min-width:100%;box-sizing:border-box}
 .katex-display>.katex>.katex-html:has(>.katex-tag){padding-inline:3em}
+/* KaTeX's tag struts extend slightly beyond the measured number width.
+   Keep that overflow inside the equation instead of triggering a scrollbar. */
+.katex-display>.katex>.katex-html>.katex-tag{padding-inline:.2em}
 .katex{color:inherit;text-indent:0;font-size:1.1em}
 .katex .katex-html{white-space:nowrap}
 .kratos-latex-error{white-space:pre-wrap;color:#d33}
